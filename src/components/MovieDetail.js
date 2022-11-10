@@ -8,7 +8,7 @@ const MovieDetail = () => {
 		const imdbID = history.location.pathname.substr(1);
 	
 		fetch(
-			`http://www.omdbapi.com/?apikey=c32f98b8&type=movie&plot=full&i=${imdbID}`
+			`https://www.omdbapi.com/?apikey=c32f98b8&type=movie&plot=full&i=${imdbID}`
 		).then(res => {
 			res.json().then(json => {
 				if (json.Response && json.Response === "False") {
