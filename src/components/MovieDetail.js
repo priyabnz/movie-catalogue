@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import history from "../router/history";
+
 const MovieDetail = () => {
 	const [movie, setMovie] = useState(null);
 	const [loading, setLoading] = useState(true);
@@ -14,7 +15,7 @@ const MovieDetail = () => {
 				if (json.Response && json.Response === "False") {
 					setMovie(null);
 				} else {
-					setMovie(...json);
+					setMovie(json);
 				}
 				setLoading(false);
 			});
